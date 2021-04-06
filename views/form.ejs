@@ -1,0 +1,25 @@
+<%- include("partials/header"); -%>
+
+    <h1>Fill in your details:</h1>
+    <form class="" action="/form" method="post">
+        <div class="form-group">
+
+            <input type="hidden" name="email" value="<%=username%>">
+            <label>Name</label>
+
+            <input type="text" class="form-control small-input mx-sm-3" value="<%=name%>" name="inputName" required>
+        </div>
+        <div class="form-group">
+
+            <label>Phone Number</label>
+            <input type="number" class="small-input form-control mx-sm-3" value="<%=phoneNumber%>" name="inputPhoneNumber" required>
+        </div>
+        <div class="form-group">
+
+            <label>Address</label>
+            <textarea name="inputAddress" class="form-control big-input" cols="20" rows="5" required><%=address%></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary" name="button">Submit</button>
+    </form>
+
+    <%- include("partials/footer"); -%>

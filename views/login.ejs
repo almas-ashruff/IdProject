@@ -1,0 +1,39 @@
+<%- include("partials/header"); -%>
+    <div class="container centered">
+        <h1>Create your ID Card in a fast, secure way!</h1>
+        <p class="lead">Just enter your email, phone number, and address</p>
+        <hr>
+        <div class="row ">
+            <div class="card ">
+                <div class="card-body ">
+
+                    <!-- Makes POST request to /login route -->
+                    <form action="/login" method="POST">
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <center>
+                                <input type="email" class="form-control" name="username" placeholder="Enter your email" required>
+                            </center>
+                            <p class="css-alert" style="visibility: <%= existsvisible%> ; ">Account already exists</p>
+
+                        </div>
+
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <center>
+                                <input type="password" class="form-control" name="password" placeholder="Enter your password" minlength="6" required>
+                            </center>
+                            <p class="css-alert" style="visibility: <%= wrongPassword%> ; ">Wrong Password</p>
+
+                        </div>
+                        <button type="submit" class="btn btn-primary">Login</button>
+                    </form>
+
+                </div>
+            </div>
+            <p class="lead lead-signup"> New to the platform? <a href="/signup" class="a-tag">Sign-Up</a></p>
+        </div>
+
+
+    </div>
+    <%- include("partials/footer"); -%>
